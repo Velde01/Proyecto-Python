@@ -1,0 +1,17 @@
+{% extends "autos/base.html" %}
+
+{% block content %}
+<h2>Lista de Autos</h2>
+
+<form method="GET" action="/buscar/">
+    <input type="text" name="q" placeholder="Buscar por marca">
+    <button type="submit">Buscar</button>
+</form>
+
+<ul>
+    {% for auto in autos %}
+        <li>{{ auto }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
