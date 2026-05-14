@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 def inicio(request):
     return render(request, "autos/inicio.html")
 
+@login_required
 def crear_auto(request):
     if request.method == 'POST':
         form = AutoForm(request.POST, request.FILES)
