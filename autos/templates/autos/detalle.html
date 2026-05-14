@@ -1,0 +1,21 @@
+{% extends "autos/base.html" %}
+
+{% block content %}
+
+<h2>{{ auto.marca }} {{ auto.modelo }}</h2>
+
+<p>{{ auto.descripcion|safe }}</p>
+
+{% if auto.imagen %}
+    <img src="{{ auto.imagen.url }}" width="400">
+{% endif %}
+
+<p>Publicado: {{ auto.fecha_publicacion }}</p>
+
+<a href="/editar/{{ auto.id }}/">Editar</a>
+
+<br><br>
+
+<a href="/borrar/{{ auto.id }}/">Borrar</a>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "autos/base.html" %}
+
+{% block content %}
+
+<h2>¿Seguro que querés borrar este auto?</h2>
+
+<p>{{ auto.marca }} {{ auto.modelo }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <button type="submit">Sí, borrar</button>
+</form>
+
+{% endblock %}

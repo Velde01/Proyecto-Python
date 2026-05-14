@@ -10,7 +10,28 @@
 
 <ul>
     {% for auto in autos %}
-        <li>{{ auto }}</li>
+
+        <li>
+            <h3>{{ auto.marca }} {{ auto.modelo }}</h3>
+
+            <p>{{ auto.descripcion|safe }}</p>
+
+            {% if auto.imagen %}
+                <img src="{{ auto.imagen.url }}" width="300">
+            {% endif %}
+
+            <br>
+
+            <a href="/detalle/{{ auto.id }}/">Leer más</a>
+
+        </li>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No hay autos aún.</p>
+
     {% endfor %}
 </ul>
 

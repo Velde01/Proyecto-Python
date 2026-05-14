@@ -15,7 +15,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'autos',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -59,3 +61,6 @@ LANGUAGE_CODE = 'es'
 TIME_ZONE = 'UTC'
 
 STATIC_URL = 'static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

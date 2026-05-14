@@ -4,4 +4,4 @@ from .models import Auto
 class AutoForm(forms.ModelForm):
     class Meta:
         model = Auto
-        fields = "__all__"
+        fields = ['marca', 'modelo', 'descripcion', 'imagen']

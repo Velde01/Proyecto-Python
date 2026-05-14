@@ -1,0 +1,23 @@
+{% extends "autos/base.html" %}
+
+{% block content %}
+
+<h2>Mi Perfil</h2>
+
+<p>Usuario: {{ perfil.user.username }}</p>
+
+<p>Email: {{ perfil.user.email }}</p>
+
+<p>Biografía: {{ perfil.biografia }}</p>
+
+{% if perfil.avatar %}
+    <img src="{{ perfil.avatar.url }}" width="200">
+{% endif %}
+
+<br>
+
+<a href="/accounts/editar-perfil/">
+    Editar perfil
+</a>
+
+{% endblock %}
